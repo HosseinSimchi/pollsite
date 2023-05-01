@@ -6,5 +6,5 @@
  ### 1-1 React Router DOM
  ### 1-2 Functional Components
  ### 1-3 HOOKS
- ## 3- Local Storage
- ## 4- Bootstrap
+ ## 2- Local Storage
+ ## 3- Bootstrap
