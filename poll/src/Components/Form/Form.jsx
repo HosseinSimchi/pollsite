@@ -3,6 +3,7 @@ import React,{useEffect, useState} from 'react';
 import './Form.css';
 import {Button, Form, Container} from 'react-bootstrap';
 
+
 const FormInfo = () => {
     
     const [data, setData] = useState([])
@@ -37,7 +38,7 @@ const FormInfo = () => {
                     </Form.Group>
 
                     <Button onClick = {submitHandler} variant="primary">
-                        Submit
+                            Submit
                     </Button>
                 </Form>
             </Container>

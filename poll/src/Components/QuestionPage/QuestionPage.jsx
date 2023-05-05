@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {Button} from 'react-bootstrap';
 
-const Countdown = () => {
+const QuestionPage = () => {
     const [minutes, setMinutes] = useState(1);
     const [second, setSecond] = useState(59)
 
@@ -24,10 +24,9 @@ const Countdown = () => {
 
     return (
         <>
-            <Button variant={minutes === 0 ? "danger" : "success"} disabled>{minutes}</Button>{' : '}
-            <Button variant={minutes === 0 ? "danger" : "success"} disabled>{second}</Button>{' '}
+            <Button variant={minutes === 0 ? "danger" : "success"} disabled>{minutes}:{second}</Button>
         </>
     )
 }
 
-export default Countdown;
+export default QuestionPage;

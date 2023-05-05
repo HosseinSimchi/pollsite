@@ -1,13 +1,12 @@
 import React from 'react'
 
-import {Header, Form, Countdown} from '../ImportedFiles';
+import {Header, Form} from '../ImportedFiles';
 
 
 const App = () => {
   return (
     <>
       <Header />
-      <Countdown />
       <Form />
     </>
   )
