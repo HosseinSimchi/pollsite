@@ -5,3 +5,4 @@ export {default as FirstQuestion} from './QuestionPage/FirstQuestion/FirstQuesti
 export {default as SecondQuestion} from './QuestionPage/SecondQuestion/SecondQuestion.jsx'
 export {default as ThirdQuestion} from './QuestionPage/ThirdQuestion/ThirdQuestion.jsx'
 export {default as BasicModal} from './Modal/BasicModal.jsx'
+

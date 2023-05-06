@@ -1,10 +1,19 @@
 import React from 'react';
 
+import {Header} from '../../ImportedFiles.js'
+import { Container } from 'react-bootstrap';
+
+import './FirstQuestion.css'
+
 const FirstQuestion = () => {
 
     return(
         <>
-            <h1>First Question</h1>
+           <Header />
+           <Container className="FQuestionContainer">
+                
+           </Container>
+
         </>
     )
 }

@@ -1,7 +1,10 @@
 import {Button,Modal} from 'react-bootstrap';
+import './BasicModal.css'
 
+import {Link} from 'react-router-dom'
 
 const BasicModal = () => {
+
 
     return (
             <div
@@ -18,7 +21,9 @@ const BasicModal = () => {
                 </Modal.Body>
 
                 <Modal.Footer>
-                <Button variant="primary">YES</Button>
+                    <Link to="/firstquestion">
+                        <Button variant="primary">YES</Button>
+                    </Link>
                 </Modal.Footer>
             </Modal.Dialog>
             </div>
