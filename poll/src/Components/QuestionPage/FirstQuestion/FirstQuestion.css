@@ -6,9 +6,13 @@ h3 {
     margin-bottom: 12px ;
 }
 
-Button {
+.button-FQ {
     display: block !important;
     margin-bottom: 8px !important;
     margin-left: 80px !important;
     width: 420px;
+}
+
+.Link {
+    text-decoration: none !important;
 }

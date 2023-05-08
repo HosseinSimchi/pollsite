@@ -1,9 +1,10 @@
 import React, {useState, useRef, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
+import './FirstQuestion.css'
 import {Header} from '../../ImportedFiles.js'
 import { Container, Button } from 'react-bootstrap';
 
-import './FirstQuestion.css'
 
 const FirstQuestion = () => {
 
@@ -42,12 +43,17 @@ const FirstQuestion = () => {
            <Container className="FQuestionContainer">
                 
                 <h3>Which one is the client side programming language?</h3>
-                <Button ref={buttonOne} onClick={ () => setIsSelectedOne(!isSelectedOne)} variant={isSelectedOne? "success" : "light"}>java</Button>
-                <Button ref={buttonTwo} onClick={ () => setIsSelectedTwo(!isSelectedTwo)} variant={isSelectedTwo? "success" : "light"}>python</Button>
-                <Button ref={buttonThree} onClick={ () => setIsSelectedThree(!isSelectedThree)} variant={isSelectedThree? "success" : "light"}>java script</Button>
-                <Button ref={buttonFour} onClick={ () => setIsSelectedFour(!isSelectedFour)} variant={isSelectedFour? "success" : "light"}>java and java script</Button>
+                <Button ref={buttonOne} className='button-FQ' onClick={ () => setIsSelectedOne(!isSelectedOne)} variant={isSelectedOne? "success" : "light"}>java</Button>
+                <Button ref={buttonTwo} className='button-FQ' onClick={ () => setIsSelectedTwo(!isSelectedTwo)} variant={isSelectedTwo? "success" : "light"}>python</Button>
+                <Button ref={buttonThree} className='button-FQ' onClick={ () => setIsSelectedThree(!isSelectedThree)} variant={isSelectedThree? "success" : "light"}>java script</Button>
+                <Button ref={buttonFour} className='button-FQ' onClick={ () => setIsSelectedFour(!isSelectedFour)} variant={isSelectedFour? "success" : "light"}>java and java script</Button>
                 <br /><br />
-                <Button onClick={nextQuestion} variant='info'>NEXT</Button>
+                <Button className='button-FQ'  onClick={nextQuestion} variant='info'>SUBMIT ANSWER</Button>
+                        <Link to="/secondquestion" className="Link">
+                            <Button className='button-FQ' variant='warning'>
+                                        NEXT QUESTION
+                            </Button>
+                        </Link>
            </Container>
 
         </>

@@ -1,0 +1,23 @@
+.SQuestionContainer {
+    margin : 50px 330px !important;
+}
+
+.Form {
+    padding: 50px ;
+    width: 600px;
+    align-items: center !important;
+}
+
+.button-SQ {
+    display: block !important;
+    width: 500px !important;
+    margin-top : 0 !important;
+}
+
+.BoxName {
+    width : 500px;
+}
+
+h3 {
+    margin-bottom: 12px ;
+}
