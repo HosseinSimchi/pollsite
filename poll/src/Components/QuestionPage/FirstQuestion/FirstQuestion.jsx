@@ -2,11 +2,13 @@ import React, {useState, useRef, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
 import './FirstQuestion.css'
-import {Header} from '../../ImportedFiles.js'
+import {Header,QuestionPage } from '../../ImportedFiles.js'
 import { Container, Button } from 'react-bootstrap';
 
 
 const FirstQuestion = () => {
+
+    const [isDisabled , setIsDisabled] = useState(true);
 
     const [firstQuestion, setFirstQuestion] = useState(JSON.parse(localStorage.getItem('firstQuestion')) === null ?  [] :  [JSON.parse(localStorage.getItem('firstQuestion'))[0]])
     const [secondQuestion, setSecondQuestion] = useState(JSON.parse(localStorage.getItem('secondQuestion')) === null ? [] : [JSON.parse(localStorage.getItem('secondQuestion'))[0]])
@@ -35,6 +37,7 @@ const FirstQuestion = () => {
         setSecondQuestion([{S : buttonTwo.current.innerText, selected: isSelectedTwo}])
         setThirdQuestion([{T : buttonThree.current.innerText, selected:isSelectedThree}])
         setFourthQuestion([{FO : buttonFour.current.innerText, selected:isSelectedFour}])
+        setIsDisabled(false)
     }
 
     return(
@@ -49,11 +52,12 @@ const FirstQuestion = () => {
                 <Button ref={buttonFour} className='button-FQ' onClick={ () => setIsSelectedFour(!isSelectedFour)} variant={isSelectedFour? "success" : "light"}>java and java script</Button>
                 <br /><br />
                 <Button className='button-FQ'  onClick={nextQuestion} variant='info'>SUBMIT ANSWER</Button>
-                        <Link to="/secondquestion" className="Link">
-                            <Button className='button-FQ' variant='warning'>
-                                        NEXT QUESTION
-                            </Button>
-                        </Link>
+                <Link to={isDisabled ? '#' : "/secondquestion"} className="Link" >
+                    <Button className='button-FQ' variant='warning' disabled={isDisabled}>
+                                NEXT QUESTION
+                    </Button>
+                </Link>
+                <QuestionPage page="first" />
            </Container>
 
         </>
