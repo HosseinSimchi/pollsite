@@ -1,5 +1,9 @@
 .SQuestionContainer {
     margin : 50px 330px !important;
+    border : 2px dashed black !important;
+    width:650px !important;
+    overflow:true !important;
+    padding: 30px !important;
 }
 
 .Form {

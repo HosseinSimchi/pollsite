@@ -1,11 +1,15 @@
 import React, {useState, useEffect} from 'react'
 import {Button} from 'react-bootstrap';
 
+import {useNavigate} from "react-router-dom"
+
 import './QuestionPage.css';
 
 const QuestionPage = ({page}) => {
     const [minutes, setMinutes] = useState(JSON.parse(localStorage.getItem('minutes')) === null ? 1 : JSON.parse(localStorage.getItem('minutes')));
     const [second, setSecond] = useState(JSON.parse(localStorage.getItem('seconds')) === null ? 59 : JSON.parse(localStorage.getItem('seconds')))
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         setTimeout(() => {
@@ -22,7 +26,7 @@ const QuestionPage = ({page}) => {
                 setSecond(second-1)
                 localStorage.seconds = second
                 localStorage.minutes = minutes
-            }else alert("Your time is over")
+            }else navigate('/thanks')
         },1000)
     },[second, minutes])
 

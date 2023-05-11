@@ -30,8 +30,8 @@ const SecondQuestion = () => {
                     <Button variant='info' onClick={submitHandler} className="button-SQ">SUBMIT ANSWER</Button>
                     
                     <br /><br />
-                    <Link to={isDisabled? "#" : "/thirdquestion"} className='Link'>
-                        <Button variant='warning' className="button-SQ" disabled={isDisabled}>NEXT QUESTION</Button>
+                    <Link to={isDisabled? "#" : "/thanks"} className='Link'>
+                        <Button variant='warning' className="button-SQ" disabled={isDisabled}>FINISH</Button>
                     </Link>
                     <br />
                     <Link to="/firstquestion" className='Link'>

@@ -45,7 +45,7 @@ const FirstQuestion = () => {
            <Header />
            <Container className="FQuestionContainer">
                 
-                <h3>Which one is the client side programming language?</h3>
+                <h3>Which one is the client side programming language? (You Can choose one or more items)</h3>
                 <Button ref={buttonOne} className='button-FQ' onClick={ () => setIsSelectedOne(!isSelectedOne)} variant={isSelectedOne? "success" : "light"}>java</Button>
                 <Button ref={buttonTwo} className='button-FQ' onClick={ () => setIsSelectedTwo(!isSelectedTwo)} variant={isSelectedTwo? "success" : "light"}>python</Button>
                 <Button ref={buttonThree} className='button-FQ' onClick={ () => setIsSelectedThree(!isSelectedThree)} variant={isSelectedThree? "success" : "light"}>java script</Button>

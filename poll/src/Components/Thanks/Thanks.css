@@ -1,0 +1,7 @@
+.ThanksPage {
+    margin : 50px 200px !important;
+    border : 2px dashed black !important;
+    width:800px !important;
+    overflow:true !important;
+    padding: 30px !important;
+}

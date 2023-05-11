@@ -4,7 +4,7 @@ import App from './Components/App/App.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import { FirstQuestion, SecondQuestion, ThirdQuestion } from './Components/ImportedFiles.js';
+import { FirstQuestion, SecondQuestion, Thanks } from './Components/ImportedFiles.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,7 +14,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/firstquestion" element={<FirstQuestion />} />
         <Route path="/secondquestion" element={<SecondQuestion />} />
-        <Route path="/thirdquestion" element={<ThirdQuestion />} />
+        <Route path="/thanks" element={<Thanks />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
